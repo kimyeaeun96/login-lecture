@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res)=> {
     res.render("home/login");
 });
-
+app.use(express.static(`${__dirname}/src/public`));
 app.use("/",  home); // use -> 미들 웨어를 등록해주는 메소드.
 
 module.exports = app;
